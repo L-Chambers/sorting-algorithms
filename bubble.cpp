@@ -37,6 +37,7 @@ void bubbleSort(int *arr, int length) {
 	bool array_is_unsorted = true; // no swaps after a pass over the array indicates it is sorted
 	while(array_is_unsorted) {
 	
+		array_is_unsorted = false; // let's assume the array is sorted before each pass
 	  // make a pass over the array
 		for (int i = 1; i < length; i++) {
 			if (arr[i - 1] > arr[i]) { // compare all adjacent elements in the array
