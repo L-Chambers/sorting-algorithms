@@ -14,7 +14,6 @@
 //-------------------------------------------------------------
 #include "bubble.h"
 #include <cstdio>
-#include <iostream>
 #include <chrono>
 #define SWAP(arr, x, y) { int t = arr[x]; arr[x] = arr[y]; arr[y] = t; }
 
@@ -41,7 +40,7 @@ void bubbleSort(int *arr, int length) {
 	  // make a pass over the array
 		for (int i = 1; i < length; i++) {
 			if (arr[i - 1] > arr[i]) { // compare all adjacent elements in the array
-				SWAP(arr, i -1, i); // out-of-order elements are swapped
+				SWAP(arr, i -1, i); // swap out-of-order elements
 				moves += 3;  // swapping requires 3 movements (see macro)
 				array_is_unsorted = true; // a swap indicates the array was not sorted before the pass
 			}
